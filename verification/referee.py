@@ -36,7 +36,6 @@ from tests import TESTS
 
 class CheckiORefereeGolf(CheckiOReferee):
     def __init__(self, **kwargs):
-        self.max_length = max_length
         super().__init__(**kwargs)
 
     def check_code(self, codestring):
@@ -61,7 +60,7 @@ class CheckiORefereeGolf(CheckiOReferee):
                 if self.check_code(self.code):
                     api.success(0)
                 else:
-                    message = "Your code returns correct answers, but it contains forbidden character."
+                    message = "Your code returns correct answers, but it contains forbidden characters."
                     self.current_test["inspector_result_addon"] = message
                     self.current_test["inspector_fail"] = True
                     api.request_write_ext(self.current_test)
@@ -75,5 +74,5 @@ api.add_listener(
             'python-27': None,
             'python-3': None
         },
-        function_name="factaral",
+        function_name="a_factaral",
     ).on_ready)
