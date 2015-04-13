@@ -1,4 +1,4 @@
-checkio-task-fibonacci-golf
+checkio-task-univocalic-factaral
 =====================
 
-CheckiO task "Fibonacci Golf"
+CheckiO task "Univocalic Factaral"
