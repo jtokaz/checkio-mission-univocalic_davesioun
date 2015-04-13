@@ -40,7 +40,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
 
             //YOUR FUNCTION NAME
-            var fname = 'factaral';
+            var fname = 'a_factaral';
 
             var checkioInput = data.in;
             var checkioInputStr = fname + '(' + JSON.stringify(checkioInput[0]) + ')';
