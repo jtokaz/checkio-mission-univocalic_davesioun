@@ -29,47 +29,28 @@ checkio.referee.cover_codes
 from checkio.signals import ON_CONNECT
 from checkio import api
 from checkio.referees.io import CheckiOReferee
+from .golf import CheckiORefereeGolf
 from checkio.referees import cover_codes
 from checkio.referees import checkers
 
 from tests import TESTS
 
-class CheckiORefereeGolf(CheckiOReferee):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+INSPECTOR_ERROR = "Your code maybe returns correct answers, but it contains forbidden characters."
+INSPECTOR_OK = "OK"
 
-    def check_code(self, codestring):
-        for c in 'eiou':
-            if c in codestring: return False
-        return True
 
-    def check_current_test(self, data):
-        user_result = data['result']
-        check_result = self.check_user_answer(user_result)
-        self.current_test["result"], self.current_test["result_addon"] = check_result
-        api.request_write_ext(self.current_test)
-        if not self.current_test["result"]:
-            return api.fail(self.current_step, self.get_current_test_fullname())
-        if self.next_step():
-            self.test_current_step()
-        else:
-            if self.next_env():
-                self.restart_env()
-            else:
-                # all tests passed. now check code size.
-                if self.check_code(self.code):
-                    api.success(0)
-                else:
-                    message = "Your code returns correct answers, but it contains forbidden characters."
-                    self.current_test["inspector_result_addon"] = message
-                    self.current_test["inspector_fail"] = True
-                    api.request_write_ext(self.current_test)
-                    api.fail(0, message)
+def inspector(code, _):
+    for c in 'eiou':
+        if c in code:
+            return False, INSPECTOR_ERROR
+    return True, INSPECTOR_OK
+
 
 api.add_listener(
     ON_CONNECT,
     CheckiORefereeGolf(
         tests=TESTS,
+        inspector=inspector,
         cover_code={
             'python-27': None,
             'python-3': None
