@@ -35,7 +35,7 @@ from checkio.referees import checkers
 
 from tests import TESTS
 
-INSPECTOR_ERROR = "Your code returns correct answers, but it contains forbidden characters."
+INSPECTOR_ERROR = "Your code maybe returns correct answers, but it contains forbidden characters."
 INSPECTOR_OK = "OK"
 
 
