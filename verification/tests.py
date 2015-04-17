@@ -12,5 +12,5 @@ TESTS = {"Basic": [
 ]}
 
 
-for n in random.sample(range(3, 200), 30):
+for n in random.sample(range(3, 100), 30):
     TESTS["Basic"].append({"input": n, "answer": factorial(n)})

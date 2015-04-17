@@ -50,6 +50,7 @@ api.add_listener(
     ON_CONNECT,
     CheckiORefereeGolf(
         tests=TESTS,
+        max_length=250,
         inspector=inspector,
         cover_code={
             'python-27': None,
