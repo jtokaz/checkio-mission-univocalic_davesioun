@@ -2,7 +2,7 @@ import random
 
 def factorial(num):
     # This is very basic solution.
-    return num * factorial(num - 1) if num else 0
+    return num * factorial(num - 1) if num else 1
 
 
 TESTS = {"Basic": [
