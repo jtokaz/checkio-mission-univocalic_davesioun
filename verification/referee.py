@@ -29,7 +29,7 @@ checkio.referee.cover_codes
 from checkio.signals import ON_CONNECT
 from checkio import api
 from checkio.referees.io import CheckiOReferee
-from .golf import CheckiORefereeGolf
+from golf import CheckiORefereeGolf
 from checkio.referees import cover_codes
 from checkio.referees import checkers
 
