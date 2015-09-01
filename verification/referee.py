@@ -40,7 +40,7 @@ INSPECTOR_OK = "OK"
 
 
 def inspector(code, _):
-    for c in 'eiou':
+    for c in 'cefghijknopqrstuvwxyz1234567890':
         if c in code:
             return False, INSPECTOR_ERROR
     return True, INSPECTOR_OK
@@ -56,5 +56,5 @@ api.add_listener(
             'python-27': None,
             'python-3': None
         },
-        function_name="a_factaral",
+        function_name="mad_lambda",
     ).on_ready)
