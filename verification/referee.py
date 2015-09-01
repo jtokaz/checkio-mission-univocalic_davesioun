@@ -53,8 +53,8 @@ api.add_listener(
         max_length=250,
         inspector=inspector,
         cover_code={
-            'python-27': None, #cover_codes.unwrap_args,
-            'python-3': None #cover_codes.unwrap_args
+            'python-27': cover_codes.unwrap_args,
+            'python-3': cover_codes.unwrap_args
         },
-        function_name="mad_lambda",
+        function_name="mad_lambda"
     ).on_ready)
