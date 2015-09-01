@@ -1,9 +1,9 @@
 import random
 
 TESTS = {"Basic": [
-    {"input": [0,11], "answer": 11},
-    {"input": [14,0], "answer": 14},
-    {"input": [22,4], "answer": 22},
+    {"input": 11, "answer": 11},
+    {"input": 14, "answer": 14},
+    {"input": 22, "answer": 22},
 ]}
 
 #R = range(0,100)
