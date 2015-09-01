@@ -1,4 +1,4 @@
-def mad_lambda_max(x,y):
+def mad_lambda(x,y):
     if x > y:
       return x
     else:
@@ -6,9 +6,9 @@ def mad_lambda_max(x,y):
 
 # this assertion should be stripped after self-testing.
 if __name__ == '__main__':
-    assert mad_lambda_max(2,5) == 5, "First"
-    assert mad_lambda_max(5,2) == 5, "Second"
-    assert mad_lambda_max(0,5) == 5, "Third"
-    assert mad_lambda_max(5,0) == 5, "Fourth"
-    assert mad_lambda_max(1999999999,2000000000) == 2000000000, "Fifth"
-    assert mad_lambda_max(2000000000,1999999999) == 2000000000, "Sixth"
+    assert mad_lambda(2,5) == 5, "First"
+    assert mad_lambda(5,2) == 5, "Second"
+    assert mad_lambda(0,5) == 5, "Third"
+    assert mad_lambda(5,0) == 5, "Fourth"
+    assert mad_lambda(1999999999,2000000000) == 2000000000, "Fifth"
+    assert mad_lambda(2000000000,1999999999) == 2000000000, "Sixth"
