@@ -1,4 +1,4 @@
-checkio-task-univocalic-factaral
+checkio-task-mad-lambda-max
 =====================
 
-CheckiO task "Univocalic Factaral"
+CheckiO task "Mad Lambda Max"
