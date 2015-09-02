@@ -1,14 +1,11 @@
-def mad_lambda(x,y):
-    if x > y:
-      return x
-    else:
-      return y
+def davassan(x):
+    return x//10
 
 # this assertion should be stripped after self-testing.
 if __name__ == '__main__':
-    assert mad_lambda(2,5) == 5, "First"
-    assert mad_lambda(5,2) == 5, "Second"
-    assert mad_lambda(0,5) == 5, "Third"
-    assert mad_lambda(5,0) == 5, "Fourth"
-    assert mad_lambda(1999999999,2000000000) == 2000000000, "Fifth"
-    assert mad_lambda(2000000000,1999999999) == 2000000000, "Sixth"
+    assert davasaan(0) == 0, "First"
+    assert davasaan(7) == 0, "Second"
+    assert davasaan(81) == 8, "Third"
+    assert davasaan(199) == 19, "Fourth"
+    assert davasaan(4500) == 45, "Fifth"
+    assert davasaan(9999) == 999, "Sixth"
