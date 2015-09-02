@@ -1,4 +1,4 @@
-checkio-task-mad-lambda-max
+checkio-task-univocalic-davasaan
 =====================
 
-CheckiO task "Mad Lambda Max"
+CheckiO task "Univocalic Davasaan"
