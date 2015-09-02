@@ -40,7 +40,7 @@ INSPECTOR_OK = "OK"
 
 
 def inspector(code, _):
-    for c in 'eiou*/':
+    for c in 'eiou*/.':
         if c in code:
             return False, INSPECTOR_ERROR
     return True, INSPECTOR_OK
