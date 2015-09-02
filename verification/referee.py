@@ -40,7 +40,7 @@ INSPECTOR_OK = "OK"
 
 
 def inspector(code, _):
-    for c in 'cefghijknopqrstuvwxyz1234567890':
+    for c in 'eiou/':
         if c in code:
             return False, INSPECTOR_ERROR
     return True, INSPECTOR_OK
@@ -50,11 +50,11 @@ api.add_listener(
     ON_CONNECT,
     CheckiORefereeGolf(
         tests=TESTS,
-        max_length=250,
+        max_length=300,
         inspector=inspector,
         cover_code={
-            'python-27': cover_codes.unwrap_args,
-            'python-3': cover_codes.unwrap_args
+            'python-27': None,
+            'python-3': None
         },
-        function_name="mad_lambda"
+        function_name="davasaan"
     ).on_ready)
