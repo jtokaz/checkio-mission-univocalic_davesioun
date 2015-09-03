@@ -40,7 +40,7 @@ INSPECTOR_OK = "OK"
 
 
 def inspector(code, _):
-    for c in '*':
+    for c in '*/':
         if c in code:
             return False, INSPECTOR_ERROR
     code1 = code.replace('davesioun','',1)
