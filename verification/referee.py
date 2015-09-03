@@ -50,11 +50,11 @@ api.add_listener(
     ON_CONNECT,
     CheckiORefereeGolf(
         tests=TESTS,
-        max_length=300,
+        max_length=100,
         inspector=inspector,
         cover_code={
             'python-27': None,
             'python-3': None
         },
-        function_name="davasaan"
+        function_name="davesioun"
     ).on_ready)
