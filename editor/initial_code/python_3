@@ -1,11 +1,11 @@
-def davesioun(x):
+def dvsn(x):
     return x/10
 
 # this assertion should be stripped after self-testing.
 if __name__ == '__main__':
-    assert davasaan(0) == 0, "First"
-    assert davasaan(7) == 0.7, "Second"
-    assert davasaan(81) == 8.1, "Third"
-    assert davasaan(199) == 19.9, "Fourth"
-    assert davasaan(4500) == 450, "Fifth"
-    assert davasaan(9999) == 999.9, "Sixth"
+    assert dvsn(0) == 0, "First"
+    assert dvsn(7) == 0.7, "Second"
+    assert dvsn(81) == 8.1, "Third"
+    assert dvsn(199) == 19.9, "Fourth"
+    assert dvsn(4500) == 450, "Fifth"
+    assert dvsn(9999) == 999.9, "Sixth"
