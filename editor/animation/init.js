@@ -79,7 +79,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
 
             //YOUR FUNCTION NAME
-            var fname = 'davasaan';
+            var fname = 'davesioun';
 
             var checkioInput = data.in || 1;
             var checkioInputStr = fname + '(' + JSON.stringify(checkioInput) + ')';
