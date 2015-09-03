@@ -3,7 +3,7 @@ from checkio import api
 
 
 def count_code_length(text):
-    return len(text)
+    return len(text) + 10*sum(1 for vw in 'aeiou' if vw in text)
 
 
 class CheckiORefereeGolf(CheckiOReferee):
