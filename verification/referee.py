@@ -57,6 +57,7 @@ api.add_listener(
         tests=TESTS,
         max_length=100,
         inspector=inspector,
+        checkers=checkers.float_comparison(6) 
         cover_code={
             'python-27': None,
             'python-3': None
