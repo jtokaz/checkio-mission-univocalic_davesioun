@@ -44,7 +44,7 @@ def inspector(code, _):
         if c in code:
             return False, INSPECTOR_ERROR
     c1 = c.replace('davesioun','',1)
-    num_vowels = sum(max(c1.count(vw),1) for vw in 'aeiou')
+    num_vowels = sum(min(c1.count(vw),1) for vw in 'aeiou')
     if num_vowels>1:
         return False, INSPECTOR_ERROR
         
