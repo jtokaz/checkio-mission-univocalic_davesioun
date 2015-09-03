@@ -43,10 +43,10 @@ def inspector(code, _):
     for c in '*/':
         if c in code:
             return False, INSPECTOR_ERROR
-    code1 = code.replace('davesioun','',1)
-    num_vowels = sum(1 for vw in 'aeiou' if vw in code1)
-    if num_vowels>1:
-        return False, INSPECTOR_ERROR
+    #code1 = code.replace('davesioun','',1)
+    #num_vowels = sum(1 for vw in 'aeiou' if vw in code1)
+    #if num_vowels>1:
+    #    return False, INSPECTOR_ERROR
         
     return True, INSPECTOR_OK
 
@@ -62,5 +62,5 @@ api.add_listener(
             'python-27': None,
             'python-3': None
         },
-        function_name="davesioun"
+        function_name="dvsn"
     ).on_ready)
